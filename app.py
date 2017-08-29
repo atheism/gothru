@@ -2,6 +2,7 @@
 
 import subprocess
 import os
+import sys
 
 cmd = os.getcwd() + '/cracker-server -addr 0.0.0.0:8080 -secret saveme'
 
