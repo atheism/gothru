@@ -7,8 +7,8 @@ import time
 
 cracker_cmd = '/opt/app-root/src/bin/cracker-server -addr 0.0.0.0:8080 -secret saveme'
 gost_cmd = '/opt/app-root/src/bin/gost -L socks://:1080 -L ss://rc4-md5:changeme@:58443'
-ss_cmd = '/opt/app-root/src/bin/ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PasswordAuthentication=no root@fastrouter.f3322.net -p 19860 -R 58443:fastrouter.f3322.net:58443 -CNq'
-socks_cmd = '/opt/app-root/src/bin/ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PasswordAuthentication=no root@fastrouter.f3322.net -p 19860 -R 1080:fastrouter.f3322.net:1080 -CNq'
+ss_cmd = '/opt/app-root/src/bin/ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PasswordAuthentication=no root@fastrouter.f3322.net -p 19860 -R 0.0.0.0:58443:fastrouter.f3322.net:58443 -CNq'
+socks_cmd = '/opt/app-root/src/bin/ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PasswordAuthentication=no root@fastrouter.f3322.net -p 19860 -R 0.0.0.0:1080:fastrouter.f3322.net:1080 -CNq'
 
 ## logs ##
 cracker_f = open("/opt/app-root/src/logs/cracker-server.log", "aw+")
