@@ -13,12 +13,12 @@ ss_cmd = '/opt/app-root/src/bin/ssh -o ServerAliveInterval=15 -o StrictHostKeyCh
 socks_cmd = '/opt/app-root/src/bin/ssh -o ServerAliveInterval=15 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PasswordAuthentication=no root@fastrouter.f3322.net -p 19860 -R 0.0.0.0:1080:0.0.0.0:1080 -CNq'
 
 ## logs ##
-chisel_f = open("/opt/app-root/src/logs/chisel-server.log", "aw+")
-cracker_f = open("/opt/app-root/src/logs/cracker-server.log", "aw+")
-ssserver_f = open("/opt/app-root/src/logs/ssserver.log", "aw+")
-gost_f = open("/opt/app-root/src/logs/gost.log", "aw+")
-ss_f = open("/opt/app-root/src/logs/ss.log", "aw+")
-socks_f = open("/opt/app-root/src/logs/socks.log", "aw+")
+chisel_f = open("/opt/app-root/src/logs/chisel-server.log", "a+")
+cracker_f = open("/opt/app-root/src/logs/cracker-server.log", "a+")
+ssserver_f = open("/opt/app-root/src/logs/ssserver.log", "a+")
+gost_f = open("/opt/app-root/src/logs/gost.log", "a+")
+ss_f = open("/opt/app-root/src/logs/ss.log", "a+")
+socks_f = open("/opt/app-root/src/logs/socks.log", "a+")
 
 ## run them ##
 chisel = subprocess.Popen(chisel_cmd.split(), stderr=chisel_f, stdout=chisel_f)
