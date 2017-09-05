@@ -11,10 +11,10 @@ ss_cmd = '/opt/app-root/src/bin/ssh -o ServerAliveInterval=15 -o StrictHostKeyCh
 socks_cmd = '/opt/app-root/src/bin/ssh -o ServerAliveInterval=15 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PasswordAuthentication=no root@fastrouter.f3322.net -p 19860 -R 0.0.0.0:1080:0.0.0.0:1080 -CNq'
 
 ## logs ##
-cracker_f = open("/opt/app-root/src/logs/cracker-server.log", "aw+")
-gost_f = open("/opt/app-root/src/logs/gost.log", "aw+")
-ss_f = open("/opt/app-root/src/logs/ss.log", "aw+")
-socks_f = open("/opt/app-root/src/logs/socks.log", "aw+")
+cracker_f = open("/opt/app-root/src/logs/cracker-server.log", "a+")
+gost_f = open("/opt/app-root/src/logs/gost.log", "a+")
+ss_f = open("/opt/app-root/src/logs/ss.log", "a+")
+socks_f = open("/opt/app-root/src/logs/socks.log", "a+")
 
 ## run them ##
 cracker = subprocess.Popen(cracker_cmd.split(), stderr=cracker_f, stdout=cracker_f)
